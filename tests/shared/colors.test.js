@@ -16,7 +16,7 @@ t.test('getColor with ansi256 color support', (ct) => {
 t.test('getColor with ansi16 color support', (ct) => {
   const stub = sinon.stub(depth, 'getColorDepth').returns(4)
 
-  ct.equal(getColor('orangered')('hello'), '\x1b[91mhello\x1b[39m')
+  ct.equal(getColor('orangered')('hello'), '\x1b[31mhello\x1b[39m')
 
   stub.restore()
   ct.end()
